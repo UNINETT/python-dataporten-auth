@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 import json
 from base64 import b64encode
 
-from social.backends.oauth import BaseOAuth2
+from social_core.backends.oauth import BaseOAuth2
 
 
 class DataportenOAuth2(BaseOAuth2):
@@ -35,7 +35,7 @@ class DataportenOAuth2(BaseOAuth2):
         """
         user = response
 
-        # Rename to what psa expects
+        # Rename to what social expects
         fullname = user.get('name', None)
         if fullname:
             user['fullname'] = fullname

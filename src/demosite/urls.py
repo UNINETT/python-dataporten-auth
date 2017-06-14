@@ -6,5 +6,5 @@ from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url('^$', TemplateView.as_view(template_name='index.html')),
-    url('', include('social.apps.django_app.urls', namespace='social')),
+    url('', include('social_django.urls', namespace='social')),
 ]
